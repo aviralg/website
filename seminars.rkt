@@ -19,8 +19,8 @@
    (define finished (if (in-future? sem) "" "finished"))
    (match-define (seminar anchor title speaker link aff date room abstract bio) sem)
    @list[
-     @div[id: @format["seminar-~a" id] class: @format["col-md-12 pn-seminar ~a" finished]]{
-       @div[id: anchor class: "pn-main-informations"]{
+     @div[id: @format["seminar-~a" id] class: @format["col-md-12 pn-seminar ~a" finished]]{        @div[id: anchor class: "pn-main-informations"]{
+         @a[href: (string-join (list "#" anchor) "") class: "pn-anchor" "#"]
          @a[onclick: "return false;" class: "pn-title" title]
          @br[]
          @span[class: "pn-name" speaker]
